@@ -20,6 +20,7 @@ body {
 
 .menu {
   width: 300px;
+  background-color: #2fe60f;
   border-radius: 8px;
   overflow: hidden;
 }
