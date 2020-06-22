@@ -65,27 +65,19 @@ body {
   text-decoration: none;
   display: block;
   padding: 20px 25px;
-  color: #fff;
+  color: #333;
+  font-weight: 600;
+  -webkit-transition: 150ms;
+  transition: 150ms;
   font-size: 14px;
   margin: 4px 0;
   position: relative;
 }
 
 .menu .item .smenu a:hover {
-  color: #7e6262;
-}
-
-.menu .item .smenu a::before {
-  content: "";
-  position: absolute;
-  width: 6px;
-  height: 100%;
-  left: 0;
-  top: 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  opacity: 0;
-  background-color: #f5eb2d;
+  color: #cacaca;
+  right: 5px;
+  border-left: 10px solid #f5eb2d;
 }
 
 .menu .item .smenu a:hover::before {
@@ -94,5 +86,49 @@ body {
 
 .menu .item:target .smenu {
   max-height: 15em;
+}
+
+main {
+  background-color: #fff;
+  height: 100vh;
+}
+
+main nav a {
+  padding: 15px 25px;
+  background-color: #333;
+}
+
+main nav a:target {
+  -webkit-animation: highlight 1s ease;
+          animation: highlight 1s ease;
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+}
+
+main section div {
+  border-left: 40px solid green;
+  padding: 10px;
+  background-color: #435;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  margin-left: -20px;
+}
+
+@-webkit-keyframes hightlight {
+  0% {
+    border-left-color: red;
+  }
+  100% {
+    border-left-color: white;
+  }
+}
+
+@keyframes hightlight {
+  0% {
+    border-left-color: red;
+  }
+  100% {
+    border-left-color: white;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
